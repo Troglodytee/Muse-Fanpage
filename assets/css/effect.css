@@ -1,0 +1,13 @@
+* {transition: all ease-in-out 0.2s;}
+
+.border-hover-white {border: 3px solid black;}
+.border-hover-white:hover {border: 3px solid white;}
+.border-hover-black {border: 3px solid white;}
+.border-hover-black:hover {border: 3px solid black;}
+
+.button-active {
+    border-color: black;
+    filter: invert(100%);
+}
+
+.button:hover {filter: invert(100%);}

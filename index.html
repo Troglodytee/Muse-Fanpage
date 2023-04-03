@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Indication of the authors of the site -->
+    <meta name="author" content="Thomas Baricault">
+
+    <!-- Indication of the official url -->
+    <link rel="canonical" href="https://www.muse-fanpage.thomas-baricault.fr/index.html">
+
+    <!-- Indication of the different urls according to the languages -->
+    <link rel="alternate" hreflang="fr" href="https://www.muse-fanpage.thomas-baricault.fr/index.html">
+
+    <!-- Link Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <!-- Link style sheets -->
+    <link href="assets/css/effect.css" rel="stylesheet">
+    <link href="assets/css/layout.css" rel="stylesheet">
+
+    <!-- Link Javascript files -->
+    <script src="assets/js/biography.js"></script>
+    <script src="assets/js/carousel.js"></script>
+    <script src="assets/js/discography-panels.js"></script>
+    <script src="assets/js/popup.js"></script>
+    <script src="assets/js/scroll-events.js"></script>
+
+    <!-- Define the site theme color -->
+    <meta name="theme-color" content="#000000">
+
+    <!-- Add the icon -->
+    <link rel="icon" type="vector/svg" href="assets/img/logo.svg">
+
+    <!-- Add a description to the site -->
+    <meta name="description" content="Muse est un groupe de rock britannique composé de Matthew Bellamy, Christopher Wolstenholme, et Dominic Howard...">
+
+    <!-- Allow indexation robots to index all pages -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Define the title -->
+    <title>Muse - Fanpage</title>
+</head>
+
+<body class="bg-black" onload="switchToAlbums(); loadClip(); focusJumpLink();">
+    <!-- Jump link -->
+    <div class="skippy visually-hidden-focusable overflow-hidden">
+        <div class="container-xl">
+            <a id="jump-link" class="d-inline-flex m-1 p-2 text-white" href="#content" tabindex="1">Passer la navigation</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header" class="container-fluid pt-2 bg-white">
+        <!-- Logo -->
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <img class="w-100 text-black" src="assets/img/logo.svg" alt="Logo de Muse">
+            </div>
+        </div>
+        <!-- Navigation -->
+        <nav class="row p-3 text-center text-uppercase">
+            <div class="col-12 col-sm-6 col-md-3">
+                <a class="m-0 fs-3 fw-bold text-decoration-none text-black" href="#biography" aria-label="Lien vers la section biographie" tabindex="2">Biography</a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <a class="m-0 fs-3 fw-bold text-decoration-none text-black" href="#discography" aria-label="Lien vers la section discography" tabindex="3">Discography</a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <a class="m-0 fs-3 fw-bold text-decoration-none text-black" href="#clips" aria-label="Lien vers la section clips" tabindex="4">Clips</a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <a class="m-0 fs-3 fw-bold text-decoration-none text-black" href="#networks" aria-label="Lien vers la section réseaux" tabindex="5">Réseaux</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main class="p-3 p-md-5">
+        <!-- Band section -->
+        <section class="px-1 px-sm-2 px-md-3 px-lg-4 px-xl-5">
+            <div class="row justify-content-center mt-5 text-white">
+                <!-- Avatar -->
+                <div class="col-8 col-md-4">
+                    <img id="content" class="w-100 rounded-circle" src="assets/img/avatar.jpg" alt="Photo de Muse" tabindex="100">
+                </div>
+                <!-- Members -->
+                <div class="col-12 col-md-7 d-flex flex-column justify-content-center text-center">
+                    <h1 class="h2 text-uppercase" tabindex="101">Membres :</h1>
+                    <p class="fs-6" tabindex="102">Matthew Bellamy (chant, guitare, piano)</p>
+                    <p class="fs-6" tabindex="103">Christopher Wolstenholme (basse, harmonica, chant, choeurs)</p>
+                    <p class="fs-6" tabindex="104">Dominic Howard (batteries, percussions)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Biography section -->
+        <section class="px-1 px-sm-2 px-md-3 px-lg-4 px-xl-5">
+            <!-- Title -->
+            <h1 id="biography" class="mt-5 mb-3 text-center text-uppercase text-white" tabindex="200">Biographie :</h1>
+            <!-- Biography section -->
+            <div onclick="biographyAction(0);" onkeypress="biographyAction(0);" class="d-flex flex-row justify-content-start my-3 button border-hover-black p-1 bg-white fs-5 text-black cursor-pointer" role="button" aria-label="Déploi la section de la biographie 'Débuts (1992-1997)'" tabindex="201">
+                <img id="biography-indicator-0" class="mx-1 biography-arrow" src="assets/img/text-section-indicator.svg" alt="Open">
+                <span>Débuts (1992-1997)</span>
+            </div>
+            <!-- Text -->
+            <div id="biography-text-0" class="d-none text-white">
+                <p tabindex="202">Les trois artistes se sont rencontrés dans les années 1990 au Teignmouth Community College, à Teignmouth (dans le Devon, Royaume-Uni). Ils appartiennent alors à des formations musicales différentes. En 1992, âgés de treize à quatorze ans, ils créent le groupe Gothic Plague. Après sa création, le groupe change fréquemment de nom, comme Carnage Mayhem, Fixed Penalty, Rocket Baby Dolls, ou encore Young Blood (cet ordre est incertain, puisque Muse a donné des interviews contradictoires à ce sujet). Ils peinent à se faire connaître en dehors du Devon.</p>
+                <p tabindex="203">En 1994, ils participent à un concours musical à Teignmouth, sous le nom Rocket Baby Dolls ; ces concours, intitulés Battles of the Bands, sont fréquents en Grande-Bretagne et, grâce à Rob Kat, le futur producteur des Fall Out Boy, se hissent au sommet. La plupart des groupes qui y participent jouent de la musique pop ou funk, reflet de la scène musicale locale du moment. À sa grande surprise, le jeune groupe britannique remporte le concours. Bellamy explique ainsi leur victoire : « Nous sommes arrivés sur scène le visage entièrement maquillé, nous étions très agressifs, nous avons joué violemment et avons tout cassé sur scène. Tout cela pour dire que nous étions motivés, que cette attitude et cette volonté ont été pour beaucoup dans le fait que nous avons gagné. » Après cette victoire, les membres du groupe changent son nom et décident de l'appeler Muse. Matthew Bellamy explique que ce nom « est facile à mémoriser, court, puissant [...] ça passe bien sur une affiche de concert, on le retient facilement » Les trois membres du groupe s'accordent pour dire que ce nom leur a été inspiré par un habitant de Teignmouth qui disait qu'il devait y avoir une muse volant au-dessus de la ville pour expliquer qu'un grand nombre de ses habitants se consacraient à la musique. Ce changement de nom coïncide avec leur décision de s'engager plus sérieusement dans la musique, plutôt que d'aller à l'université. Ils donnent ainsi des concerts dans des clubs locaux, notamment au bar Le Cavern, dans la ville d'Exeter. Cependant, ces concerts ne leur rapportent que peu d'argent, c'est pourquoi ils doivent travailler en parallèle. En 1995, ils enregistrent leurs premières démos au domicile du bassiste, Christopher Wolstenholme. L'enregistrement intitulé This is a Muse Demo ne sera fait qu'en quelques exemplaires et sur cassette seulement. Ces chansons sont introuvables en entier sur le web.</p>
+                <p tabindex="204">Ils sortent en 1997 l'album Newton Abbot Demo composé de onze titres dont plusieurs seront repris dans leurs albums suivants. Parmi ces titres, il y avait notamment Sober, Agitated, Ashamed ou encore une première version de Plug in Baby.</p>
+            </div>
+            <!-- Biography section -->
+            <div onclick="biographyAction(1);" onkeypress="biographyAction(1);" class="d-flex flex-row justify-content-start my-3 button border-hover-black p-1 bg-white fs-5 text-black cursor-pointer" role="button" aria-label="Déploi la section de la biographie 'Muscle Museum et Showbiz (1998-2000)'" tabindex="210">
+                <img id="biography-indicator-1" class="mx-1 biography-arrow" src="assets/img/text-section-indicator.svg" alt="Open">
+                <span>Muscle Museum et Showbiz (1998-2000)</span>
+            </div>
+            <!-- Text -->
+            <div id="biography-text-1" class="d-none text-white">
+                <p tabindex="211">Au cours d'une série de concerts à Londres et à Manchester, alors qu'ils tentent de se faire connaître, les membres du groupe font la connaissance de Dennis Smith, le propriétaire de la maison de disques Sawmills. Ils sortent leur premier EP (mini-album), en 1997 sous le label Dangerous Records. La sortie de leur second mini-album, Muscle Museum, marque un tournant dans la carrière de Muse en attirant l'attention du journaliste musical Steve Lamacq, qui écrit un article sur eux dans le magazine New Musical Express (plus connu sous le nom NME). En 1998, Dennis Smith crée la maison de disques Taste Media spécialement pour Muse, qui éveille rapidement l'intérêt d'autres maisons de disques11. La démarche semble viser la conservation d'une certaine liberté de création.</p>
+                <p tabindex="212">Ils signent ensuite avec Maverick Records aux États-Unis, ce qui leur permet de faire des concerts aux États-Unis. À leur retour au Royaume-Uni, Taste Media les fait signer avec plusieurs labels en Europe (Motor Records en Allemagne, Mushroom Records au Royaume-Uni et Naïve Records en France) ainsi qu'en Australie. Leur premier album, Showbiz (1999), est produit par John Leckie (qui a travaillé avec Radiohead sur l'album The Bends). Le style de cet album et les nombreuses références lyriques rappellent le groupe à ses débuts. La sortie de Showbiz leur permet d'assurer la première partie des concerts de Foo Fighters et de Red Hot Chili Peppers aux États-Unis devant plus de vingt mille spectateurs. En 1999 et en 2000, Muse participe aux plus grands festivals européens, et donne des concerts au Japon et en Australie, faisant ainsi de plus en plus d'adeptes en Europe de l'Ouest. Lors d'un long voyage, c'est Bellamy qui écrit les chansons les plus populaires de l'album (Sunburn, Muscle Museum, Cave...). La pochette de l'album est réalisée en partie par Tanya Andrew, la petite amie de Bellamy à l'époque.</p>
+            </div>
+            <!-- Biography section -->
+            <div onclick="biographyAction(2);" onkeypress="biographyAction(2);" class="d-flex flex-row justify-content-start my-3 button border-hover-black p-1 bg-white fs-5 text-black cursor-pointer" role="button" aria-label="Déploi la section de la biographie 'Origin of Symmetry et Absolution (2001-2005)'" tabindex="220">
+                <img id="biography-indicator-2" class="mx-1 biography-arrow" src="assets/img/text-section-indicator.svg" alt="Open">
+                <span>Origin of Symmetry et Absolution (2001-2005)</span>
+            </div>
+            <!-- Text -->
+            <div id="biography-text-2" class="d-none text-white">
+                <p tabindex="221">Le groupe écrit son deuxième album, Origin of Symmetry. Cet album propose un style plus imposant et des sons plus électroniques que le précédent. En 2002, ils sortent un CD et un DVD live, Hullabaloo, enregistrement de leur concert à Paris au Zénith. Ces sorties permettent à Muse d'atteindre les sommets des ventes britanniques. Christopher Wolstenholme parle de cet album et des premiers pas de Muse sur le site officiel en affirmant : « Tous les albums et chansons que nous avons faits représentent des souvenirs marquants. Avec chaque album, des choses différentes sont arrivées et leur écoute nous y fait penser. Je trouve que l'écoute des premiers albums me rappelle des moments enthousiasmants comme être signés et partir en tournée pour la première fois. Mais pas une chanson en particulier. » Le 26 et le 28 août 2011, lors du festival de Reading et Leeds, le groupe a joué entièrement l'album à l'occasion des 10 ans de sa sortie.</p>
+                <p tabindex="222">N'appréciant pas de jouer en playback, le groupe tend à exacerber le grotesque de cette situation. Ainsi, lors d'un playback forcé de Bliss en 2001 lors de l'émission britannique Pepsi, le groupe exagéra tous leurs mouvements. Alors qu'ils faisaient leur promotion de l'album The Resistance sur la Rai Due, le 20 septembre 2009, la chaîne leur imposa un playback ; ils ont donc interprété leur dernier single, Uprising, en échangeant leurs rôles. C'est ainsi qu'on a pu voir Matthew Bellamy à la batterie, Dominic Howard à la basse et au chant et Christopher Wolstenholme à la guitare et synthétiseur, sans que la présentatrice Simona Ventura ne décèle la supercherie bien qu'elle les ait déjà invités dans sa même émission en 2003 (où ils avaient joué le jeu du playback instrumental).</p>
+                <p tabindex="223">Le 22 septembre 2003, Muse sort son troisième album, Absolution, qui lui vaut un large succès et une notoriété mondiale. L'album comporte le titre diffusé sur Internet Stockholm Syndrome, ainsi que les singles Time is Running Out et Hysteria. L'album est surtout marqué par les notions de fin du monde et d'apocalypse (la première chanson Apocalypse Please dont les paroles sont simplement « Déclarez l'état d'urgence, c'est la fin du monde »). Il s'agit probablement du disque le plus sombre du groupe jusqu'à présent. Cela s'expliquerait par le fait qu'il ait été composé dans le contexte de la guerre en Irak qui touche Matthew Bellamy. Fort du succès de cet album, le groupe entame une longue tournée, Absolution Tour, qui le mène sur les plus importants festivals d'Europe avec notamment le festival Glastonbury où il sera tête d'affiche et joue devant des dizaines de milliers de personnes. Ce concert est marqué par deux événements particuliers, la captation du futur DVD Absolution Tour (Live in Glastonbury) et la mort du père du batteur du groupe, Bill Howard, venu le voir ce soir-là.</p>
+                <p tabindex="224">Cette tournée qui se joue devant plus d'un million et demi de spectateurs se termine au Earl's Court de Londres. L'album s'est vendu à deux millions et demi d'exemplaires dans le monde dont près de six cent mille au Royaume-Uni, quatre cent mille en France et cinq cent cinquante mille aux États-Unis. En 2005, le groupe joue très rarement en concert mais apparait lors du Live 8 sur la scène de Versailles. Cette pause est l'occasion pour ses membres de préparer le futur album qu'ils annoncent déjà très différent de ce qu'ils ont fait jusqu'à maintenant.</p>
+            </div>
+            <!-- Biography section -->
+            <div onclick="biographyAction(3);" onkeypress="biographyAction(3);" class="d-flex flex-row justify-content-start my-3 button border-hover-black p-1 bg-white fs-5 text-black cursor-pointer" role="button" aria-label="Déploi la section de la biographie 'Black Holes and Revelations et tournée HAARP (2006-2008)'" tabindex="230">
+                <img id="biography-indicator-3" class="mx-1 biography-arrow" src="assets/img/text-section-indicator.svg" alt="Open">
+                <span>Black Holes and Revelations et tournée HAARP (2006-2008)</span>
+            </div>
+            <!-- Text -->
+            <div id="biography-text-3" class="d-none text-white">
+                <p tabindex="231">Muse s'enferme au studio Miraval, dans le sud de la France (studio ayant notamment accueilli l'enregistrement du double album des Pink Floyd The Wall ou encore l'album Kiss Me, Kiss Me, Kiss Me de The Cure) où ils peaufinent surtout l'écriture, et la mise en place de quelques chansons. Mais finalement, ils n'arrivent pas à obtenir le résultat escompté durant ces quelques mois d'enfermement. Ils partent alors aux studios Avatar, et Electric Lady à New York, où l'ambiance énergique et urbaine de la nuit les inspire davantage, puis aux Officine Meccaniche Studios, en Italie, et enfin aux Townhouse Studios de Londres, pour terminer l'enregistrement de l'album. En mai 2006, le single Supermassive Black Hole, issu du futur album, est diffusé sur plusieurs radios. La chanson est un mélange de funk et de rock où Matthew Bellamy semble s'inspirer de Prince pour ce qui est de la voix.</p>
+                <p tabindex="232">Black Holes and Revelations est donc le quatrième album de Muse, sorti le 3 juillet 2006. Ce nouvel opus subit une influence electro et le style du groupe s'enrichit de nouvelles sonorités. Il comprend onze chansons. D'après le bassiste du groupe, Chris Wolstenholme, vingt chansons auraient été enregistrées en studio. « Sur la vingtaine de chansons qui a été enregistrée, en fait quelques-unes n'ont jamais été terminées. De ce qui a été finalisé, je pense que tout a probablement déjà été sorti. Les autres seront peut être complétées un jour mais en ce moment nous sommes trop absorbés par les nouvelles. Revenir sur ces trucs serait comme faire un pas dans la mauvaise direction » déclare Wolstenholme. Cet album présente un mélange des genres, avec des sonorités électroniques proches des groupes ABBA, Queen voire Depeche Mode.</p>
+                <p tabindex="233">On compte également plus de « faces B » à la sortie de l'album que sur toute la période Absolution, parmi lesquels Crying Shame, Glorious et Easily (Glorious se trouve sur la version japonaise de Black Holes & Revelations, à l'instar de Fury sur Absolution). L'album est un succès : au bout de six mois et demi d'exploitation, il se vend à près de trois millions d'exemplaires, dont la moitié en Europe. Le single Starlight largement diffusé sur les ondes fait connaître Muse au grand public.</p>
+                <p tabindex="234">La tournée HAARP Tour est marquée par trois concerts : deux pour inaugurer le nouveau Wembley Stadium les 16 et 17 juin devant plus de cent mille personnes et le 23 juin au Parc des Princes (près de cinquante mille personnes), avec le groupe Archive en première partie. Muse confirme par ailleurs son statut de groupe live grâce à plusieurs récompenses telles que le Q Award du meilleur concert ainsi qu'aux Brit Awards. Ils participent également à de nombreux festivals dont le festival Musilac à Aix-les-Bains (vingt-cinq mille spectateurs), le Main Square Festival à Arras (vingt-cinq mille spectateurs), Rock Werchter, Rock am Ring (quatre-vingt mille spectateurs), Rock im Park (soixante mille spectateurs), le Paléo festival de Nyon (trente-cinq mille spectateurs) et la Garden Nef Party à Angoulême (dix mille spectateurs).</p>
+                <p tabindex="235">Le 17 mars 2008 sort le DVD HAARP, accompagné d'un CD live. Il est retransmis en avant-première au cinéma le 11 mars 2008 dans plusieurs villes du Royaume-Uni et le 13 mars à Paris. Le DVD doit son nom au projet militaire américain High Frequency Active Auroral Research Program, projet controversé par Nick Begich et Jeane Manning dans le livre Les anges ne jouent pas de cette HAARP, car considéré comme capable de modifier le climat de certaines régions, influencer les comportements humains. Haarp est basé en Alaska aux États-Unis. Le 12 avril 2008, Muse joue au Royal Albert Hall à Londres au profit de la recherche contre le cancer, le concert est notamment marqué par le retour dans la set-list de la puissante chanson Megalomania. Pour l'occasion, Matthew Bellamy utilise l'orgue géant, inutilisé depuis plusieurs années. Au total, la tournée HAARP Tour dure près de deux ans et comptabilise près de deux cents concerts partout dans le monde, pour se terminer en août 2008 lors d'un concert au V Festival en Angleterre.</p>
+                <p tabindex="236">Le 5 août 2008, les sites traitant de Muse diffusèrent en téléchargement libre le jam Who Knows Who, une chanson inédite enregistrée à la volée par Muse et The Streets. D'après Matthew Bellamy, « ce n'est qu'un jam que nous avons enregistré tard le soir et sur lequel The Streets a posé sa voix, nous ne comptions pas en faire une chanson sérieuse, mais nous sommes ravis que cette chanson ait été diffusée librement sur le web. » Il s'agit de la face B du single Uprising.</p>
+            </div>
+            <!-- Biography section -->
+            <div onclick="biographyAction(4);" onkeypress="biographyAction(4);" class="d-flex flex-row justify-content-start my-3 button border-hover-black p-1 bg-white fs-5 text-black cursor-pointer" role="button" aria-label="Déploi la section de la biographie 'The Resistance (2009-2011)'" tabindex="240">
+                <img id="biography-indicator-4" class="mx-1 biography-arrow" src="assets/img/text-section-indicator.svg" alt="Open">
+                <span>The Resistance (2009-2011)</span>
+            </div>
+            <!-- Text -->
+            <div id="biography-text-4" class="d-none text-white">
+                <p tabindex="241">Le successeur de Black Holes and Revelations est publié le 14 septembre 2009. L'enregistrement de l'album s'est déroulé à partir du mois de novembre 2008 dans le studio de Matthew Bellamy au lac de Côme, en Italie. Un orchestre a été nécessaire pour certains morceaux contenant des influences classiques importantes (le morceau en trois parties se rapprochant d'une symphonie, Exogenesis). Ce nouvel album est le plus ambitieux à composer. Matthew Bellamy explique que le groupe a lui-même arrangé tous les détails au niveau de l'orchestre afin d'avoir une grande liberté, mais cela a pris plus de temps. « Il y a une nouvelle chanson en trois parties, qui tient plus de la symphonie que de la chanson, sur laquelle je travaille sporadiquement depuis plusieurs années. Un important pourcentage de la composition est instrumental, et je n'ai jamais voulu collaborer avec un arrangeur pour les cordes parce qu'ils se « l'approprient ». Alors, j'ai fait les arrangements des parties instrumentales moi-même, ce qui a pris beaucoup de temps en raison de mon manque d'expérience pour un projet de cette envergure. Elle devrait normalement se retrouver sur les trois dernières pistes du prochain album. »</p>
+                <p tabindex="242">Le 2 juin 2009, la tournée européenne The Resistance Tour est annoncée sur le site officiel. Elle comporte une trentaine de dates dans plusieurs pays d'Europe. De passage en Amérique du Nord lors de l'automne 2009, en première partie de la tournée de U2, le groupe Muse parcourt l'Amérique du Nord à l'hiver 2010 en tant que tête d'affiche principale et s'arrête dans une vingtaine de villes. Pour leur concert à Liévin le 31 octobre 2009, à l'occasion de la fête d'Halloween, les membres du groupe sont arrivés déguisés sur scène. Ainsi, Dominic Howard était en Spider-Dom, Matthew Bellamy en Comte Dracula et Christopher Wolstenholme en super-héros.</p>
+                <p tabindex="243">United States of Eurasia est l'objet d'une chasse au trésor organisée par le groupe en juillet 2009. Il est ainsi le premier morceau à être révélé au public. Il est ensuite diffusé sur la radio britannique BBC Radio One le 3 juillet 2009 dans l'émission de Zane Lowe. La pochette de l'album est dévoilée le 4 août 2009. Le premier single de The Resistance, Uprising, est quant à lui diffusé le 3 août 2009 sur les radios françaises. Un second single, intitulé Undisclosed Desires, est publié le 16 novembre en format numérique, ainsi qu'en Allemagne sur CD fin février 2010. Un mois après la sortie de leur album, Muse annonce avoir vendu un million et demi d'albums. Le groupe se produit pour la première fois au Stade de France les 11 juin 2010 et 12 juin 2010. Il est également au Festival des Vieilles Charrues à Carhaix le 15 juillet 2010 et à nouveau au stade de Wembley les 10 septembre 2010 et 11 septembre 2010 ainsi qu'au Manchester Lancashire County Cricket Ground le 4 du même mois. Le groupe a vendu les quatre-vingt mille places du Wembley Stadium en seulement douze minutes.</p>
+                <p tabindex="244">En février 2010, la maison de disques Warner annonce que la musique des artistes sous leur label ne sera plus diffusée gratuitement sur les sites de streaming tel Deezer ou Spotify. À la suite de cela, le bassiste Christopher Wolstenholme s'est exprimé pour s'opposer catégoriquement à cette décision en déclarant : « C'est comme enlever votre chanson des ondes radiophoniques, n'est-ce pas ? [...] En tant que membre de groupe, on souhaite avant tout que les fans puissent écouter notre musique. Qu'importe la source par laquelle ils la récupèrent. » En mai 2010, le groupe enregistre un nouveau morceau, Neutron Star Collision (Love Is Forever) accompagné d'une vidéo, à l'occasion de la sortie du film Twilight III. Il est joué pour la première fois sur scène, le 25 mai 2010, tout comme le morceau I Belong to You, lors de leur concert privé au Casino de Paris. Une nouvelle guitare conçue pour l'occasion pour le guitariste Matthew Bellamy par le luthier Manson apparait lors de ce concert, elle est utilisée pour les morceaux Uprising et Resistance. Cette guitare, baptisée Casinocaster, est argentée et dotée de deux manches ; l'un d'eux étant fretless (sans frettes - à l'instar des manches des instruments à cordes de la famille du violon). Le 25 décembre 2010, le groupe dévoile sur son site officiel, en guise de cadeau de Noël, deux extraits du concert du 11 septembre 2010 au Wembley Stadium de Londres, Uprising et Citizen Erased.</p>
+                <p tabindex="245">En janvier 2011, Matthew Bellamy confie au journal anglais The Sun qu'il aimerait que Muse soit le premier groupe à réaliser un concert dans l'espace, et qu'il souhaite contacter Richard Branson, créateur de Virgin, afin d'utiliser son vaisseau spatial. Muse annonce également quelle pourrait être l'orientation de leur prochain DVD en public. Il ne s'agirait pas d'un concert public « classique » mais d'un documentaire à la Live! Tonight! Sold Out!! de Nirvana en 1994. Le groupe retracerait le déroulement de la tournée The Resistance Tour (2009-2010). Le groupe devait, selon la BBC Radio 5, composer l'hymne officiel des Jeux olympiques de 2012 à Londres. L'annonce est faite à la radio lors du breakfast show au matin du 26 février 2010 sur Radio 5. En mai 2012, à l'occasion des Jeux olympiques d'été de 2012 de Londres, le groupe porte la flamme olympique jusqu'à la ville de Teignmouth, où ils ont grandi. D'après une intervention de Chris Wolstenholme durant l'interview donnée sur la radio BBC 6 Music le 23 août 201144, le groupe serait prêt à entrer en studio après les derniers concerts de la tournée à Reading et Leeds : « septembre et octobre, c'est le moment où on entrera en studio pour écrire le prochain album. » Le 7 juin 2012, le groupe met en ligne sur son site officiel les dates de la future tournée européenne. Le groupe passe par le Park&Suites Arena de Montpellier le 16 octobre 2012, le Palais omnisports de Paris-Bercy le 18 octobre et le Zénith de Nantes le 22 octobre pour les dates françaises45. Le morceau Survival, diffusé sur BBC Radio 1 dans l'émission de Zane Lowe le mercredi 27 juin, est choisi pour devenir l'hymne officiel des Jeux olympiques 2012. Le 13 juillet 2012, la liste complète des titres qui composeront le nouvel album The 2d Law est dévoilée sur le site officiel. La pochette de l'album est dévoilée le 30 juillet 2012 sur le site officiel du groupe. Christopher Wolstenholme est compositeur et chanteur des titres Save Me et Liquid State.</p>
+            </div>
+            <!-- Biography section -->
+            <div onclick="biographyAction(5);" onkeypress="biographyAction(5);" class="d-flex flex-row justify-content-start my-3 button border-hover-black p-1 bg-white fs-5 text-black cursor-pointer" role="button" aria-label="Déploi la section de la biographie 'The Second Law et Live at Rome Olympic Stadium (2012-2013)'" tabindex="250">
+                <img id="biography-indicator-5" class="mx-1 biography-arrow" src="assets/img/text-section-indicator.svg" alt="Open">
+                <span>The Second Law et Live at Rome Olympic Stadium (2012-2013)</span>
+            </div>
+            <!-- Text -->
+            <div id="biography-text-5" class="d-none text-white">
+                <p tabindex="251">L'écriture d'un sixième album commence en septembre 2011. Le groupe confirme leur entrée en studio à l'automne. Plusieurs morceaux sont déjà écrits et sont proposés au groupe par le leader. Cette annonce est faite le 20 mai 2011 par le batteur Dominic Howard et le bassiste Christopher Wolstenholme dans le NME. L'album verra donc le jour au mois d'octobre 2012, soit plus de trois ans après The Resistance. Matthew Bellamy évoque cependant déjà, en septembre 2009, l'orientation que pourrait prendre leur sixième album. En effet, il a déclaré, lors d'une autre entrevue, qu'il désirerait s'inspirer de musiques asiatiques et explorer davantage les musiques chinoise ou japonaise en particulier. En juillet 2010, il déclare : « Je pense que, pour le prochain album, nous allons essayer de faire quelque chose de plus personnel et de plus intime, vous savez, je voudrais essayer de trouver un son plus terre à terre. Je crois que nous avons poussé les choses très loin musicalement, vers d'énormes shows, et je pense que ça a commencé à avoir une grande influence sur notre travail en studio. Donc je crois que le prochain album sera le bon moment pour s'écarter de ça, pour essayer de nous redécouvrir et retrouver un côté plus intime dans notre musique. » Bellamy déclare en septembre 2010, au magazine anglais Time Out, vouloir revoir leurs ambitions à la baisse en ce qui concerne leurs « méga concerts ». Il affirme ne plus pouvoir aller plus loin dans la démesure et le groupe a donc l'intention de ne plus jouer dans des stades comme le Stade de France ou le Wembley Stadium, lors de la tournée promotionnelle du prochain album en 2012.</p>
+                <p tabindex="252">Le 6 août 2012, Muse annonce sur son site officiel que le premier single extrait du nouvel album The 2nd Law sera Madness. Le single sort dans le monde entier le lundi 20 août 2012, à la suite de sa première diffusion « officielle », le même jour, sur BBC Radio 1, lors de l'émission de Zane Lowe. Le 24 septembre 2012, le groupe propose son nouvel album à l'écoute en streaming. Il se classe, dès la première semaine, numéro 1 des ventes dans une douzaine de pays et atteint, pour la première fois de la carrière du groupe, la plus haute position des ventes mondiales d'albums au bout d'une dizaine de jours. Un DVD live est également sorti le 2 décembre 2013, montrant le concert au stade olympique de Rome, s'intitulant The Unsustainable Tour, live at Rome Olympic Stadium. Après Madness, Follow Me et Panic Station, Big Freeze apparait sur les radios début 2014.</p>
+            </div>
+            <!-- Biography section -->
+            <div onclick="biographyAction(6);" onkeypress="biographyAction(6);" class="d-flex flex-row justify-content-start my-3 button border-hover-black p-1 bg-white fs-5 text-black cursor-pointer" role="button" aria-label="Déploi la section de la biographie 'Drones (2014-2016)'" tabindex="260">
+                <img id="biography-indicator-6" class="mx-1 biography-arrow" src="assets/img/text-section-indicator.svg" alt="Open">
+                <span>Drones (2014-2016)</span>
+            </div>
+            <!-- Text -->
+            <div id="biography-text-6" class="d-none text-white">
+                <p tabindex="261">Le groupe évoque rapidement après la sortie de The Second Law, une volonté de revenir à une musique plus pure et plus simple d'un point de vue musique rock. Matthew Bellamy entend par là son désir de revenir à des compositions simplement guitare-basse-batterie et de ne plus insérer de sonorités électroniques, très présentes depuis Black Holes and Revelations en 2006. Le groupe promet un changement radical et des sonorités plus heavy selon les dires du leader dans une série de tweets datant de juillet 2014. Il annonce par là même une sortie du septième album espérée pour l'été 2015. Le 1er avril 2015, le groupe de rock maubeugeois Anorexic Sumotori revendique un riff employé par Muse pour sa chanson Psycho.</p>
+                <p tabindex="262">Il semblait de plus, afin de renforcer la thèse d'une musique heavy que Shavo Odadjian, bassiste du groupe de metal System of a Down, ait déjà participé à l'un des morceaux de l'album du trio, selon un tweet du musicien posté au printemps. L'enregistrement de Drones se déroule du 1er au 18 octobre 2014 à Vancouver. D'après un tweet de Matthew Bellamy, l'album aura pour thème la Troisième Guerre mondiale, l'écologie profonde et l'écart empathique ainsi que sur la manipulation mentale. L'album est publié en juin 2015. Le premier extrait de Drones, Psycho, est disponible le 12 mars 2015 en même temps que la mise en ligne de la prévente de l'album. Le premier single Dead Inside est publié le 23 mars 2015, accompagné d'un clip. Une première série de concerts en Angleterre, nommée Psycho UK Tour s'effectue du 15 au 23 mars 2015. Le second single, Mercy est publié le 8 juin 2015, accompagné d'un clip. Pendant l'été, le groupe tourne le clip de Revolt, annoncé comme troisième single de l'album. L'album est un énorme succès critique et commercial, arrivant au top des charts de nombreux pays, y compris les États-Unis, une première pour le groupe.</p>
+                <p tabindex="263">Le groupe annonce début septembre une immense tournée pour la fin 2015, avec une scène spéciale se trouvant au milieu de la salle.</p>
+            </div>
+            <!-- Biography section -->
+            <div onclick="biographyAction(7);" onkeypress="biographyAction(7);" class="d-flex flex-row justify-content-start my-3 button border-hover-black p-1 bg-white fs-5 text-black cursor-pointer" role="button" aria-label="Déploi la section de la biographie 'Simulation Theory et Origin of Muse (2017-2019)'" tabindex="270">
+                <img id="biography-indicator-7" class="mx-1 biography-arrow" src="assets/img/text-section-indicator.svg" alt="Open">
+                <span>Simulation Theory et Origin of Muse (2017-2019)</span>
+            </div>
+            <!-- Text -->
+            <div id="biography-text-7" class="d-none text-white">
+                <p tabindex="271">En février 2017, Muse annonce une tournée nord-américaine avec Thirty Seconds to Mars et PVRIS. Le 11 mai, Muse annonce que le nouveau single aura comme titre Dig Down. Le morceau est révélé le 18 mai 2017 sur YouTube. En octobre, le groupe annonce sur Instagram qu'ils sont de retour en studio. Le 5 octobre 2017, la société Blizzard Entertainment annonce la participation de Muse à la BlizzCon 2017, le 4 novembre 2017, pour un concert de clôture. En décembre 2017, le groupe annonce que le second single du huitième album s'appellera Thought Contagion, nom confirmé sur Twitter par Matthew Bellamy. Le titre est sorti le 14 février 2018. Le troisième single Something Human est sorti le 19 juillet 2018. Le 30 août 2018, le titre The Dark Side, l'artwork de l'album et la liste complète des titres ont été divulgués. Le dernier single avant la sortie de l'album est publié le 27 septembre 2018, il s'intitule Pressure.</p>
+                <p tabindex="272">Le huitième album dont le nom est Simulation Theory sort le 9 novembre 2018. Il est composé de 11 titres et 9 de ces titres en version acoustiques/alternatives/live/remix en bonus. Une tournée mondiale s'en suivra dès 2019, marquant également les 25 ans de carrière du groupe. « Nous allons faire la plus grande tournée de notre carrière, les gens ne vont pas y croire, il y aura des choses qu'ils n'auront jamais vues auparavant (...) Nous sommes toujours aussi intéressés par les dernières technologies et ce qui est à la pointe... et on a trouvé quelque chose qu'on va utiliser » déclare Matthew Bellamy au magazine NME.</p>
+                <p tabindex="273">Le 6 décembre 2019 paraît un coffret collector intitulé Origin of Muse, avec une version remastérisée des albums Showbiz et Origin of Symmetry pour les vingt ans du premier album. Ce coffret est dévoilé le 7 septembre. Il contient les albums, de nombreuses versions alternatives des morceaux, ainsi que toutes les faces B et deux titres inédits.</p>
+            </div>
+            <!-- Biography section -->
+            <div onclick="biographyAction(8);" onkeypress="biographyAction(8);" class="d-flex flex-row justify-content-start my-3 button border-hover-black p-1 bg-white fs-5 text-black cursor-pointer" role="button" aria-label="Déploi la section de la biographie 'Will of the People (2022-2023)'" tabindex="280">
+                <img id="biography-indicator-8" class="mx-1 biography-arrow" src="assets/img/text-section-indicator.svg" alt="Open">
+                <span>Will of the People (2022-2023)</span>
+            </div>
+            <!-- Text -->
+            <div id="biography-text-8" class="d-none text-white">
+                <p tabindex="281">Après s'être essayé dans deux projets musicaux en 2020, un album avec le supergroupe The Jaded Hearts Club et des compositions en solo, Matthew Bellamy annonce dans le numéro d'août 2020 de Total Guitar et sur la page Facebook officielle du groupe le 3 août 2020, un retour en studio du groupe, dès 2021, pour l'enregistrement de Will of the People, neuvième album, successeur de Simulation Theory paru en 2018.</p>
+                <p tabindex="282">Le 26 décembre 2021, Matthew Bellamy, à bord de sa voiture dans les rues de Los Angeles accompagné de son fils, fait un direct Instagram avec le compte du groupe dans lequel il y dévoile un extrait d'un morceau inédit intitulé Won't Stand Down en fond sonore. Le morceau se présente comme le plus heavy metal de la discographie du groupe.</p>
+                <p tabindex="283">Le 7 janvier 2022, le titre, la pochette et la date de sortie du single sont officiellement annoncés par le groupe sur les réseaux sociaux. Le 11 mars, une vidéo dévoile le nom de l'album, certains titres qui le composent ainsi que la sortie du nouveau single, Compliance.</p>
+                <p tabindex="284">Le 17 mars, la prévente de dix-sept packs de l'album (vinyle, CD, cassettes) est annoncée, la sortie étant prévue pour le 26 août 2022.</p>
+                <p tabindex="285">Le troisième simple, Will of the People, titre d'ouverture de l'album, sort le 1er juin 2022, accompagné par l'annonce d'une date pour un concert privé à la salle Pleyel à Paris le 25 octobre 2022. Le quatrième simple de l'album, Kill or be Killed sort le 21 juillet 2022 accompagné du clip vidéo. Ce sera le dernier titre à être dévoilé avant la sortie officielle de l'album, le 26 août. Le titre fait partie des titres rock-métal du groupe mais reste très différent de Won't Stand Down, premier titre dévoilé de l'album à la mi-janvier dernier. L'album sort le 26 août 2022. Les six clips vidéo de ces titres sortent le même jour que Will of the People. Le cinquième extrait de l'album You Make me Feel Like it's Halloween sort en même temps que l'album avec les autres titres : Liberation, Ghosts (How Can I Move on), Verona, Euphoria et We Are Fucking Fucked.</p>
+                <p tabindex="286">Leur tournée commencera en Amérique du nord le 25 février 2023 à Chicago pour finir le 20 avril à Salt Lake City. Ils passeront notamment à Québec le 11 mars puis à Montréal le 14 mars pour les fans francophones. Après cette tournée en Amérique du nord, ils enchaîneront avec la tournée européenne des stades, de mai à juillet 2023.</p>
+                <p tabindex="287">En novembre et décembre 2022, le single Ghosts (How Can I Move On) est décliné en deux versions, respectivement en italien le 25 novembre en duo avec la chanteuse Elisa puis le 9 décembre en français avec la chanteuse Mylène Farmer.</p>
+            </div>
+        </section>
+
+        <!-- Discography section -->
+        <section class="px-1 px-sm-2 px-md-3 px-lg-4 px-xl-5">
+            <!-- Title -->
+            <h1 id="discography" class="mt-5 mb-3 text-center text-uppercase text-white" tabindex="300">Discographie :</h1>
+            <div class="container-fluid bg-white">
+                <!-- Panel buttons -->
+                <div class="row">
+                    <div id="albums-button" onclick="switchToAlbums();" onkeypress="switchToAlbums();" class="col-6 button border-hover-black bg-black p-2 cursor-pointer text-center" role="button" aria-label="Passer sur le panneau des albums" tabindex="301">
+                        <span class="h4 fw-bold text-white">ALBUMS</span>
+                    </div>
+                    <div id="lives-button" onclick="switchToLives();" onkeypress="switchToLives();" class="col-6 button border-hover-black bg-black cursor-pointer text-center p-2" role="button" aria-label="Passer sur le panneau des lives" tabindex="302">
+                        <span class="h4 fw-bold text-white">LIVES</span>
+                    </div>
+                </div>
+                <!-- Albums -->
+                <div id="albums-panel" class="row row-cols-1 row-cols-md-2 p-2">
+                    <div class="col row align-items-center p-2" tabindex="310">
+                        <img class="col-5 col-sm-4 col-md-5 col-lg-4 text-black" src="assets/img/albums/showbiz.jpg" alt="Pochette de l'album 'Showbiz'">
+                        <div class="col-7 col-sm-8 col-md-7 col-lg-8 d-flex flex-column justify-content-around text-black">
+                            <span class="fs-5 text-decoration-underline">Showbiz</span>
+                            <span class="fs-5">(1999)</span>
+                        </div>
+                    </div>
+                    <div class="col row align-items-center p-2" tabindex="311">
+                        <img class="col-5 col-sm-4 col-md-5 col-lg-4 text-black" src="assets/img/albums/origin-of-symmetry.jpg" alt="Pochette de l'album 'Origin of Symmetry'">
+                        <div class="col-7 col-sm-8 col-md-7 col-lg-8 d-flex flex-column justify-content-around text-black">
+                            <span class="fs-5 text-decoration-underline">Origin of Symmetry</span>
+                            <span class="fs-5">(2001)</span>
+                        </div>
+                    </div>
+                    <div id="albums-first-extend" class="row align-items-center p-2 hidden-discography d-none" tabindex="312">
+                        <img class="col-5 col-sm-4 col-md-5 col-lg-4 text-black" src="assets/img/albums/absolution.jpg" alt="Pochette de l'album 'Absolution'">
+                        <div class="col-7 col-sm-8 col-md-7 col-lg-8 d-flex flex-column justify-content-around text-black">
+                            <span class="fs-5 text-decoration-underline">Absolution</span>
+                            <span class="fs-5">(2003)</span>
+                        </div>
+                    </div>
+                    <div class="row align-items-center p-2 hidden-discography d-none" tabindex="313">
+                        <img class="col-5 col-sm-4 col-md-5 col-lg-4 text-black" src="assets/img/albums/black-holes-and-revelations.jpg" alt="Pochette de l'album 'Black Holes and Revelations'">
+                        <div class="col-7 col-sm-8 col-md-7 col-lg-8 d-flex flex-column justify-content-around text-black">
+                            <span class="fs-5 text-decoration-underline">Black Holes and Revelations</span>
+                            <span class="fs-5">(2006)</span>
+                        </div>
+                    </div>
+                    <div class="row align-items-center p-2 hidden-discography d-none" tabindex="314">
+                        <img class="col-5 col-sm-4 col-md-5 col-lg-4 text-black" src="assets/img/albums/the-resistance.jpg" alt="Pochette de l'album 'The Resistance'">
+                        <div class="col-7 col-sm-8 col-md-7 col-lg-8 d-flex flex-column justify-content-around text-black">
+                            <span class="fs-5 text-decoration-underline">The Resistance</span>
+                            <span class="fs-5">(2009)</span>
+                        </div>
+                    </div>
+                    <div class="row align-items-center p-2 hidden-discography d-none" tabindex="315">
+                        <img class="col-5 col-sm-4 col-md-5 col-lg-4 text-black" src="assets/img/albums/the-2nd-law.jpg" alt="Pochette de l'album 'The 2nd Law'">
+                        <div class="col-7 col-sm-8 col-md-7 col-lg-8 d-flex flex-column justify-content-around text-black">
+                            <span class="fs-5 text-decoration-underline">The 2nd Law</span>
+                            <span class="fs-5">(2012)</span>
+                        </div>
+                    </div>
+                    <div class="row align-items-center p-2 hidden-discography d-none" tabindex="316">
+                        <img class="col-5 col-sm-4 col-md-5 col-lg-4 text-black" src="assets/img/albums/drones.jpg" alt="Pochette de l'album 'Drones'">
+                        <div class="col-7 col-sm-8 col-md-7 col-lg-8 d-flex flex-column justify-content-around text-black">
+                            <span class="fs-5 text-decoration-underline">Drones</span>
+                            <span class="fs-5">(2015)</span>
+                        </div>
+                    </div>
+                    <div class="row align-items-center p-2 hidden-discography d-none" tabindex="317">
+                        <img class="col-5 col-sm-4 col-md-5 col-lg-4 text-black" src="assets/img/albums/simulation-theory.jpg" alt="Pochette de l'album 'Simulation Theory'">
+                        <div class="col-7 col-sm-8 col-md-7 col-lg-8 d-flex flex-column justify-content-around text-black">
+                            <span class="fs-5 text-decoration-underline">Simulation Theory</span>
+                            <span class="fs-5">(2018)</span>
+                        </div>
+                    </div>
+                    <div class="row align-items-center p-2 hidden-discography d-none" tabindex="318">
+                        <img class="col-5 col-sm-4 col-md-5 col-lg-4 text-black" src="assets/img/albums/will-of-the-people.jpg" alt="Pochette de l'album 'Will of the People'">
+                        <div class="col-7 col-sm-8 col-md-7 col-lg-8 d-flex flex-column justify-content-around text-black">
+                            <span class="fs-5 text-decoration-underline">Will of the People</span>
+                            <span class="fs-5">(2022)</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Lives -->
+                <div id="lives-panel" class="row row-cols-1 row-cols-md-2 p-2 d-none">
+                    <div class="row align-items-center p-2" tabindex="310">
+                        <img class="col-5 col-sm-4 col-md-5 col-lg-4 text-black" src="assets/img/lives/hullabaloo.jpg" alt="Visuel du live 'Hullabaloo">
+                        <div class="col-7 col-sm-8 col-md-7 col-lg-8 d-flex flex-column justify-content-around text-black">
+                            <span class="fs-5 text-decoration-underline">Hullabaloo</span>
+                            <span class="fs-5">(2002)</span>
+                        </div>
+                    </div>
+                    <div class="row align-items-center p-2" tabindex="311">
+                        <img class="col-5 col-sm-4 col-md-5 col-lg-4 text-black" src="assets/img/lives/haarp.jpg" alt="Visuel du live 'H.A.A.R.P.'">
+                        <div class="col-7 col-sm-8 col-md-7 col-lg-8 d-flex flex-column justify-content-around text-black">
+                            <span class="fs-5 text-decoration-underline">H.A.A.R.P. - Live from Wembley</span>
+                            <span class="fs-5">(2008)</span>
+                        </div>
+                    </div>
+                    <div id="lives-first-extend" class="row align-items-center p-2 hidden-discography d-none" tabindex="312">
+                        <img class="col-5 col-sm-4 col-md-5 col-lg-4 text-black" src="assets/img/lives/rome-olympic-stadium.jpg" alt="Visuel du live au 'Rome Olympic Stadium'">
+                        <div class="col-7 col-sm-8 col-md-7 col-lg-8 d-flex flex-column justify-content-around text-black">
+                            <span class="fs-5 text-decoration-underline">Live at Rome Olympic Stadium</span>
+                            <span class="fs-5">(2013)</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- See more button -->
+                <div class="d-flex justify-content-center text-center">
+                    <span id="see-more" onclick="seeMore();" onkeypress="seeMore();" class="button mt-3 mb-2 border-hover-white p-1 bg-white fs-5 text-black cursor-pointer" role="button" aria-label="Bouton pour afficher plus d'éléments" tabindex="330">Voir plus</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clips section -->
+        <section>
+            <!-- Title -->
+            <h1 id="clips" class="mt-5 mb-3 text-center text-uppercase text-white" tabindex="400">Clips :</h1>
+            <div class="container-fluid">
+                <div class="row justify-content-center align-items-center">
+                    <!-- Previous clip button -->
+                    <div class="col-2 col-md-1 d-flex justify-content-end">
+                        <img onclick="previousClip();" onkeypress="previousClip();" class="button clip-arrow cursor-pointer text-white" src="assets/img/player/left-arrow.svg" alt="Précédent" role="button" aria-label="Clip précédent" tabindex="402">
+                    </div>
+                    <!-- Clip -->
+                    <div class="col-8">
+                        <a id="clip-link" class="text-decoration-none" href="#" tabindex="401">
+                            <div class="d-flex justify-content-center align-items-center w-100 text-white">
+                                <img id="clip-image" class="w-100 text-white" src="" alt="">
+                                <img class="player-icon text-white" src="assets/img/player/youtube-player.svg" alt="Vidéo" aria-hidden="true">
+                            </div>
+                            <p class="m-0 fs-6 text-start text-white">(lien vers Youtube)</p>
+                            <p id="clip-name" class="mb-3 fs-3 text-center text-white"></p>
+                        </a>
+                    </div>
+                    <!-- Next clip button -->
+                    <div class="col-2 col-md-1 d-flex justify-content-start">
+                        <img onclick="nextClip();" onkeypress="nextClip();" class="button clip-arrow cursor-pointer mirror text-white" src="assets/img/player/left-arrow.svg" alt="Suivant" role="button" aria-label="Clip suivant" tabindex="403">
+                    </div>
+                    <!-- Clip captions -->
+                    <div class="col-8 d-flex justify-content-around">
+                        <img id="caption-0" onclick="selectClip(0);" class="caption button cursor-pointer" src="assets/img/player/circle.svg" alt="">
+                        <img id="caption-1" onclick="selectClip(1);" class="caption button cursor-pointer" src="assets/img/player/circle.svg" alt="">
+                        <img id="caption-2" onclick="selectClip(2);" class="caption button cursor-pointer" src="assets/img/player/circle.svg" alt="">
+                        <img id="caption-3" onclick="selectClip(3);" class="caption button cursor-pointer" src="assets/img/player/circle.svg" alt="">
+                        <img id="caption-4" onclick="selectClip(4);" class="caption button cursor-pointer" src="assets/img/player/circle.svg" alt="">
+                        <img id="caption-5" onclick="selectClip(5);" class="caption button cursor-pointer" src="assets/img/player/circle.svg" alt="">
+                        <img id="caption-6" onclick="selectClip(6);" class="caption button cursor-pointer" src="assets/img/player/circle.svg" alt="">
+                        <img id="caption-7" onclick="selectClip(7);" class="caption button cursor-pointer" src="assets/img/player/circle.svg" alt="">
+                        <img id="caption-8" onclick="selectClip(8);" class="caption button cursor-pointer" src="assets/img/player/circle.svg" alt="">
+                        <img id="caption-9" onclick="selectClip(9);" class="caption button cursor-pointer" src="assets/img/player/circle.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Networks section -->
+        <section>
+            <!-- Title -->
+            <h1 id="networks" class="mt-5 mb-3 text-center text-uppercase text-white" tabindex="500">Réseaux :</h1>
+            <div class="row justify-content-around align-items-center">
+                <!-- Site officiel -->
+                <div class="col-2 col-lg-1">
+                    <a href="http://www.muse.mu/index.php" tabindex="501">
+                        <img class="w-100 button text-white" src="assets/img/networks/globe.svg" alt="Lien vers le site officiel de Muse">
+                    </a>
+                </div>
+                <!-- Facebook -->
+                <div class="col-2 col-lg-1">
+                    <a href="https://www.facebook.com/muse" tabindex="502">
+                        <img class="w-100 button text-white" src="assets/img/networks/facebook.svg" alt="Lien vers le Facebook de Muse">
+                    </a>
+                </div>
+                <!-- Twitter -->
+                <div class="col-2 col-lg-1">
+                    <a href="https://twitter.com/muse" tabindex="503">
+                        <img class="w-100 button text-white" src="assets/img/networks/twitter.svg" alt="Lien vers le Twitter de Muse">
+                    </a>
+                </div>
+                <!-- Youtube -->
+                <div class="col-2 col-lg-1">
+                    <a href="https://youtube.com/user/muse" tabindex="504">
+                        <img class="w-100 button text-white" src="assets/img/networks/youtube.svg" alt="Lien vers le Youtube de Muse">
+                    </a>
+                </div>
+                <!-- Myspace -->
+                <div class="col-2 col-lg-1">
+                    <a href="https://myspace.com/muse" tabindex="505">
+                        <img class="w-100 button text-white" src="assets/img/networks/myspace.svg" alt="Lien vers le Myspace de Muse">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popups section -->
+        <section id="footer-popup" class="d-none position-fixed fixed-top w-100 h-100 bg-white bg-opacity-50">
+            <div class="row h-100 justify-content-center align-items-center">
+                <div class="col-10 col-md-8 h-75 border border-3 border-white p-1 bg-black scrollable">
+                    <!-- Close button -->
+                    <img id="close-footer-popup" onclick="closeFooterPopup();" onkeypress="closeFooterPopup();" class="position-sticky shadow cross-button" src="assets/img/cross.svg" alt="Fermer" role="button" aria-label="Fermer la popup" tabindex="800">
+                    <!-- Privacy policy -->
+                    <div id="privacy-policy" class="d-none text-center text-white">
+                        <h1 class="mt-2 mb-3 text-uppercase" tabindex="801">Politique de confidentialité :</h1>
+                        <p class="h3" tabindex="802">En construction</p>
+                    </div>
+                    <!-- Legal notice -->
+                    <div id="legal-notice" class="d-none text-center text-white">
+                        <h1 class="mt-2 mb-3 text-uppercase" tabindex="801">Mentions légales :</h1>
+                        <p class="h3" tabindex="802">En construction</p>
+                    </div>
+                    <!-- Accessibility notice -->
+                    <div id="accessibility-notice" class="d-none text-white">
+                        <h1 class="mt-2 mb-3 text-center text-uppercase" tabindex="801">Fiche d'accessibilité :</h1>
+                        <div class="p-2 p-md-5 text-start">
+                            <p tabindex="802">J'ai choisi le noir et le blanc comme couleurs pour ce site car elles offres un très bon contraste et sont cohérentes avec le groupe Muse.</p>
+                            <p tabindex="803">La navigation par clavier est gérée grâce aux tabindex car cela permet d'éviter que l'utilisateur se perde sur le site.</p>
+                            <p tabindex="804">J'ai mis une description aria-label sur chaque bouton pour permettre à l'utilisateur de comprendre à quoi ils servent.</p>
+                            <p tabindex="805">Les gros contenus sont coupés et un bouton pour les développer est présent afin de permettre une navigation plus rapide et plus agréable.</p>
+                            <div class="row align-items-center mt-5" tabindex="806">
+                                <span class="col-12 col-md-3 fs-2">Note :</span>
+                                <div class="col-12 col-md-9 d-flex justify-content-start align-items-center">
+                                    <span class="me-3 fs-1 text-success">97/100</span>
+                                    <span class="fs-5">(D'après Ligthouse)</span>
+                                </div>
+                            </div>
+                            <h2 class="mt-5 text-decoration-underline" tabindex="807">Navigation :</h2>
+                            <p tabindex="808">Les attributs [tabindex] ont des valeurs plus grandes que 0 ce qui veut dire qu'un ordre pour la navigation par clavier est défini. Cela peut s'avérer frustrant mais cela permet de rendre la navigation plus claire.</p>
+                            <h2 class="mt-5 text-decoration-underline" tabindex="809">Audits :</h2>
+                            <ul>
+                                <li tabindex="810">Les attributs [aria-*] remplissent leurs rôles</li>
+                                <li tabindex="811">La balise [body] ne possède pas d'attribut [aria-hidden="true"]</li>
+                                <li tabindex="812">Tous les éléments possèdant un attribut [role] possèdent également tous les attributs [aria-*] requis pour leur rôle</li>
+                                <li tabindex="813">Toutes les valeurs des attributs [role] sont valides</li>
+                                <li tabindex="814">Toutes les valeurs des attributs [aria-*] sont valides</li>
+                                <li tabindex="815">Tous les attributs [aria-*] sont valides et n'ont pas de problème dans leur nommage</li>
+                                <li tabindex="816">Toutes les images possèdent une alternative textuelle</li>
+                                <li tabindex="817">Aucune utilisation de l'attribut empêchant l'utilisateur de zoomer</li>
+                                <li tabindex="818">Tous les éléments de type [button], [link], ou [menuitem] ont des noms accessibles</li>
+                                <li tabindex="819">Les éléments possédant un attribut [aria-hidden="true"] n'ont aucun enfant pouvant être visé par la navigation par clavier</li>
+                                <li tabindex="820">La page contient des moyens de passer les contenus répétitifs pour la navigation par clavier</li>
+                                <li tabindex="821">Le contraste entre l'arrière-plan et le contenu est suffisant</li>
+                                <li tabindex="822">La page possède un titre</li>
+                                <li tabindex="823">Les attributs [id] sont uniques</li>
+                                <li tabindex="824">La page a un language défini</li>
+                                <li tabindex="825">La valeur de la langue de la page est valide</li>
+                                <li tabindex="826">Les liens ont des noms compréhensibles</li>
+                                <li tabindex="827">Les titres apparaissent dans le bon ordre</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scroll to top button -->
+    <aside>
+        <img id="up-arrow" onclick="scrollToTop();" onkeypress="scrollToTop();" class="up-arrow text-black" src="assets/img/up-arrow.svg" alt="Revenir au début de la page" role="button" tabindex="700">
+    </aside>
+
+    <!-- Footer -->
+    <footer class="container-fluid mt-5 p-2 bg-white">
+        <div class="row justify-content-center">
+            <!-- Logo -->
+            <div class="col-8 col-sm-4 align-self-center">
+                <img class="w-100 text-black" src="assets/img/logo.svg" alt="Logo de Muse">
+            </div>
+            <!-- Navigation -->
+            <div class="col-8 col-sm-8 d-flex flex-column justify-content-around">
+                <p onclick="showPrivacyPolicy();" onkeypress="showPrivacyPolicy();" class="m-0 fs-5 fw-bold text-black cursor-pointer" role="button" aria-haspopup="dialog" aria-label="Affiche la politique de confidentialité en popup" tabindex="600">Politique de confidentialité</p>
+                <p onclick="showLegalNotice();" onkeypress="showLegalNotice();" class="m-0 fs-5 fw-bold text-black cursor-pointer" role="button" aria-haspopup="dialog" aria-label="Affiche les mentions légales en popup" tabindex="601">Mentions légales</p>
+                <p onclick="showAccessibilityNotice();" onkeypress="showAccessibilityNotice();" class="m-0 fs-5 fw-bold text-black cursor-pointer" role="button" aria-haspopup="dialog" aria-label="Affiche la fiche d'accessibilité en popup" tabindex="602">Accessibilité</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
