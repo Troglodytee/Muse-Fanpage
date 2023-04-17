@@ -1,7 +1,7 @@
 # Muse-Fanpage
 ![Preview image](./preview/preview.jpg)
 
-A one-page website about the band "Muse". Made using the "Boostrap" CSS framework. This site allowed me to experiment "Bootstrap" and to made an accessible site.
+A one-page website about the band "Muse". Made using the "Bootstrap" CSS framework. This site allowed me to experiment "Bootstrap" and to made an accessible site.
 ## Features
 - The band biography
 - The discography of the band
